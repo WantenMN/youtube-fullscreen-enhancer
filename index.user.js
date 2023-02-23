@@ -10,7 +10,7 @@
 // @namespace       https://greasyfork.org/en/scripts/460569
 // @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
 // @downloadURL     https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
-// @version         0.0.4
+// @version         0.0.5
 // @match           http*://*.youtube.com/watch?*
 // @match           http*://youtube.com/watch?*
 // @match           http*://*.youtu.be/watch?*
@@ -23,11 +23,25 @@
 (function () {
   "use strict";
 
-  //settings
+  /**
+   * settings-start
+   */
+  //shortcut key to toggle the script
   const toggleKey = 'e';
-  const hideProgressBar = false;//hide progress bar?
 
-  const enableStyle =`
+  //Wether hide player progress bar, when pause a video by click spacebar or press K 
+  //true or false
+  const hideProgressBar = true;
+
+  //Wether to hide video title and player control bar when mousemove
+  //true: show
+  //false：hide
+  const isMouseMoveToggle = true;
+  /**
+   * settings-end
+   */
+
+  const enableStyle = `
   .ytp-chrome-top {
     display: none !important;
   }
@@ -55,13 +69,34 @@
 
   let enableFlag = false;
   let styleTag = null;
+  let mouseMoveSetTimeoutID = null;
+
+  //keydown toggle
   window.addEventListener("keydown", (e) => {
     if (e.key === toggleKey) {
+      clearTimeout(mouseMoveSetTimeoutID)
       enableFlag = !enableFlag;
-      styleTag && document.head.removeChild(styleTag);
-      styleTag = null;
-      if (enableFlag)
-        styleTag = GM_addStyle(enableStyle);
+      styleTag && removeStyleTag();
+      enableFlag && addStyleTag();
     }
   });
+
+  //mousemove toggle
+  window.addEventListener("mousemove", (e) => {
+    clearTimeout(mouseMoveSetTimeoutID)
+    if (!isMouseMoveToggle || !enableFlag) return;
+    styleTag && removeStyleTag();
+    mouseMoveSetTimeoutID = setTimeout(() => {
+      enableFlag && addStyleTag();
+    }, 3500)
+  });
+
+  const addStyleTag = () => {
+    styleTag = GM_addStyle(enableStyle);
+  }
+
+  const removeStyleTag = () => {
+    document.head.removeChild(styleTag);
+    styleTag = null;
+  }
 })();
