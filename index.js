@@ -7,8 +7,8 @@
 // @supportURL      https://github.com/WantenMN/userscript-youtube/issues
 // @icon            https://youtube.com/favicon.ico
 // @homepageURL     https://github.com/WantenMN/userscript-youtube
-// @namespace       https://greasyfork.org/en/
-// @version         0.0.0
+// @namespace       https://greasyfork.org/en/scripts/460569
+// @version         0.0.1
 // @match           http*://*.youtube.com/watch?*
 // @match           http*://youtube.com/watch?*
 // @match           http*://*.youtu.be/watch?*
