@@ -3,11 +3,13 @@
   <br>
 <div>
 
-When playing a youtube video in full screen mode, pressing the key "e" will enable or disable the following features:
+Press the key "e" will enable or disable the following features:
+
+(when pause Youtube video by press spacebar or K key in full screen mode)
 
 - Hide video title
 - Hide player control bar
 - Hide annotation
-- Captions text will no longer jump up when the video is paused, nor will it jump down when continue playing the video.
+- Captions text will no longer jump up and jump down when pause or continue video by click spacebar or press K.
 
-The shortcut key to turn on or off this script you can modify it in the code.
+The shortcut key to turn on or off this script and the value of hideProgressBar and isMouseMoveToggle you can modify in the code.
