@@ -8,7 +8,8 @@
 // @icon            https://youtube.com/favicon.ico
 // @homepageURL     https://github.com/WantenMN/userscript-youtube
 // @namespace       https://greasyfork.org/en/scripts/460569
-// @version         0.0.1
+// @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
+// @version         0.0.2
 // @match           http*://*.youtube.com/watch?*
 // @match           http*://youtube.com/watch?*
 // @match           http*://*.youtu.be/watch?*
