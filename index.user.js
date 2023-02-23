@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            Hide Youtube video title and player control bar
-// @description     Hide Youtube video title and player control bar when playing in full screen.
+// @description     Hide Youtube video title and player control bar when paused.
 // @author          Wanten
 // @copyright       2023 Wanten
 // @license         MIT
@@ -10,7 +10,7 @@
 // @namespace       https://greasyfork.org/en/scripts/460569
 // @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
 // @downloadURL     https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
-// @version         0.0.5
+// @version         0.0.6
 // @match           http*://*.youtube.com/watch?*
 // @match           http*://youtube.com/watch?*
 // @match           http*://*.youtu.be/watch?*
@@ -29,11 +29,11 @@
   //shortcut key to toggle the script
   const toggleKey = 'e';
 
-  //Wether hide player progress bar, when pause a video by click spacebar or press K 
+  //Hide or show player progress bar, when pause a video by click spacebar or press K 
   //true or false
   const hideProgressBar = true;
 
-  //Wether to hide video title and player control bar when mousemove
+  //Whether to hide video title and player control bar when mousemove
   //true: show
   //false：hide
   const isMouseMoveToggle = true;
