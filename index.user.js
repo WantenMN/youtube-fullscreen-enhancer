@@ -9,7 +9,7 @@
 // @homepageURL     https://github.com/WantenMN/userscript-youtube
 // @namespace       https://greasyfork.org/en/scripts/460569
 // @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
-// @version         0.0.2
+// @version         0.0.3
 // @match           http*://*.youtube.com/watch?*
 // @match           http*://youtube.com/watch?*
 // @match           http*://*.youtu.be/watch?*
@@ -55,8 +55,8 @@
   let enableFlag = false;
   let styleTag = null;
   window.addEventListener("keydown", (e) => {
-    enableFlag = !enableFlag;
     if (e.key === toggleKey) {
+      enableFlag = !enableFlag;
       styleTag && document.head.removeChild(styleTag);
       styleTag = null;
       if (enableFlag)
