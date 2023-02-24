@@ -11,10 +11,10 @@
 // @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
 // @downloadURL     https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
 // @version         0.0.6
-// @match           http*://*.youtube.com/watch?*
-// @match           http*://youtube.com/watch?*
-// @match           http*://*.youtu.be/watch?*
-// @match           http*://youtu.be/watch?*
+// @match           http*://*.youtube.com/*
+// @match           http*://youtube.com/*
+// @match           http*://*.youtu.be/*
+// @match           http*://youtu.be/*
 // @run-at          document-end
 // @grant           GM_addStyle
 // ==/UserScript==
