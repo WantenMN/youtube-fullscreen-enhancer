@@ -10,7 +10,7 @@
 // @namespace       https://greasyfork.org/en/scripts/460569
 // @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
 // @downloadURL     https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
-// @version         0.0.6
+// @version         0.0.7
 // @match           http*://*.youtube.com/*
 // @match           http*://youtube.com/*
 // @match           http*://*.youtu.be/*
