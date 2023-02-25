@@ -1,5 +1,5 @@
 <div>
-  <h1>userscript-youtube</h1>
+  <h1>YouTube Fullscreen Enhancer</h1>
   <br>
 <div>
 
