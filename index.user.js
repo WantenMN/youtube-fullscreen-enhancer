@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name            Hide Youtube video title and player control bar
-// @description     Hide Youtube video title and player control bar when paused.
+// @name            YouTube Fullscreen Enhancer
+// @description     This userscript improves YouTube's fullscreen mode by enabling the customization of the viewing experience. Users can hide the video title, player controls, and annotations, as well as stabilize captions when pausing or resuming playback. All these features can be easily toggled.
 // @author          Wanten
 // @copyright       2023 Wanten
 // @license         MIT
@@ -10,7 +10,7 @@
 // @namespace       https://greasyfork.org/en/scripts/460569
 // @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
 // @downloadURL     https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
-// @version         0.0.7
+// @version         0.0.8
 // @match           http*://*.youtube.com/*
 // @match           http*://youtube.com/*
 // @match           http*://*.youtu.be/*
