@@ -67,36 +67,53 @@
   }
   `;
 
-  let enableFlag = false;
+  let isEnabled = false;
   let styleTag = null;
-  let mouseMoveSetTimeoutID = null;
-
-  //keydown toggle
-  window.addEventListener("keydown", (e) => {
-    if (e.key === toggleKey) {
-      clearTimeout(mouseMoveSetTimeoutID)
-      enableFlag = !enableFlag;
-      styleTag && removeStyleTag();
-      enableFlag && addStyleTag();
-    }
-  });
-
-  //mousemove toggle
-  window.addEventListener("mousemove", (e) => {
-    clearTimeout(mouseMoveSetTimeoutID)
-    if (!isMouseMoveToggle || !enableFlag) return;
-    styleTag && removeStyleTag();
-    mouseMoveSetTimeoutID = setTimeout(() => {
-      enableFlag && addStyleTag();
-    }, 3500)
-  });
+  let mouseMoveTimeout = null;
 
   const addStyleTag = () => {
     styleTag = GM_addStyle(enableStyle);
-  }
+  };
 
   const removeStyleTag = () => {
-    document.head.removeChild(styleTag);
+    styleTag?.parentNode?.removeChild(styleTag);
     styleTag = null;
-  }
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key !== toggleKey) {
+      return;
+    }
+
+    clearTimeout(mouseMoveTimeout);
+    isEnabled = !isEnabled;
+
+    if (styleTag) {
+      removeStyleTag();
+    }
+
+    if (isEnabled) {
+      addStyleTag();
+    }
+  };
+
+  const handleMouseMove = (event) => {
+    if (!isMouseMoveToggle || !isEnabled) {
+      return;
+    }
+
+    clearTimeout(mouseMoveTimeout);
+    if (styleTag) {
+      removeStyleTag();
+    }
+
+    mouseMoveTimeout = setTimeout(() => {
+      if (isEnabled) {
+        addStyleTag();
+      }
+    }, 3500);
+  };
+
+  window.addEventListener("keydown", handleKeyDown);
+  window.addEventListener("mousemove", handleMouseMove);
 })();
