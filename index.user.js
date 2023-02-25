@@ -10,7 +10,7 @@
 // @namespace       https://greasyfork.org/en/scripts/460569
 // @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
 // @downloadURL     https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
-// @version         0.0.8
+// @version         0.0.9
 // @match           http*://*.youtube.com/*
 // @match           http*://youtube.com/*
 // @match           http*://*.youtu.be/*
@@ -23,23 +23,16 @@
 (function () {
   "use strict";
 
-  /**
-   * settings-start
-   */
-  //shortcut key to toggle the script
+  // Keyboard shortcut to toggle the script on and off
   const toggleKey = 'e';
-
-  //Hide or show player progress bar, when pause a video by click spacebar or press K 
-  //true or false
+  // Whether to hide or show the player progress bar when the video is paused
+  // true: hide
+  // false: show
   const hideProgressBar = true;
-
-  //Whether to hide video title and player control bar when mousemove
-  //true: show
-  //false：hide
+  // Whether to show or hide the video title and player control bar on mousemove
+  // true: show
+  // false: hide
   const isMouseMoveToggle = true;
-  /**
-   * settings-end
-   */
 
   const enableStyle = `
   .ytp-chrome-top {
