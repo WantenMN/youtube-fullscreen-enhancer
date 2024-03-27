@@ -1,6 +1,6 @@
 // ==UserScript==
 // @name            YouTube Fullscreen Enhancer
-// @description     This userscript improves YouTube's fullscreen mode by enabling the customization of the viewing experience. Users can hide the video title, player controls, and annotations, as well as stabilize captions when pausing or resuming playback. All these features can be easily toggled.
+// @description     This script enhances the user experience when pausing a YouTube video in full-screen mode by hiding certain elements and adding a play icon.
 // @author          Wanten
 // @copyright       2024 Wanten
 // @license         MIT
