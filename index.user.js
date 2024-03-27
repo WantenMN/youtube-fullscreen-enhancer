@@ -2,7 +2,7 @@
 // @name            YouTube Fullscreen Enhancer
 // @description     This userscript improves YouTube's fullscreen mode by enabling the customization of the viewing experience. Users can hide the video title, player controls, and annotations, as well as stabilize captions when pausing or resuming playback. All these features can be easily toggled.
 // @author          Wanten
-// @copyright       2023 Wanten
+// @copyright       2024 Wanten
 // @license         MIT
 // @supportURL      https://github.com/WantenMN/youtube-fullscreen-enhancer/issues
 // @icon            https://youtube.com/favicon.ico
@@ -11,10 +11,10 @@
 // @updateURL       https://github.com/WantenMN/youtube-fullscreen-enhancer/raw/main/index.user.js
 // @downloadURL     https://github.com/WantenMN/youtube-fullscreen-enhancer/raw/main/index.user.js
 // @version         0.2
-// @match           http*://*.youtube.com/*
-// @match           http*://youtube.com/*
-// @match           http*://*.youtu.be/*
-// @match           http*://youtu.be/*
+// @match           http*://*.youtube.com/watch*
+// @match           http*://youtube.com/watch*
+// @match           http*://*.youtu.be/watch*
+// @match           http*://youtu.be/watch*
 // @run-at          document-end
 // @grant           GM_addStyle
 // ==/UserScript==
