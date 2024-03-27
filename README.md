@@ -13,7 +13,7 @@ This script enhances the user experience when pausing a YouTube video in full-sc
 
 ## Usage
 
-To use this script, visit the [YouTube Full Screen Video Pause Refiner](https://greasyfork.org/en/scripts/460569) and install it using a user script manager like Tampermonkey. Once installed, the script will automatically run whenever you visit YouTube.
+To use this script, visit the [YouTube Full Screen Enhancer](https://greasyfork.org/en/scripts/460569) and install it using a user script manager like Tampermonkey. Once installed, the script will automatically run whenever you visit YouTube.
 
 ## Compatibility
 
