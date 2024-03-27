@@ -4,12 +4,12 @@
 // @author          Wanten
 // @copyright       2023 Wanten
 // @license         MIT
-// @supportURL      https://github.com/WantenMN/userscript-youtube/issues
+// @supportURL      https://github.com/WantenMN/youtube-fullscreen-enhancer/issues
 // @icon            https://youtube.com/favicon.ico
-// @homepageURL     https://github.com/WantenMN/userscript-youtube
+// @homepageURL     https://github.com/WantenMN/youtube-fullscreen-enhancer
 // @namespace       https://greasyfork.org/en/scripts/460569
-// @updateURL       https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
-// @downloadURL     https://github.com/WantenMN/userscript-youtube/raw/main/index.user.js
+// @updateURL       https://github.com/WantenMN/youtube-fullscreen-enhancer/raw/main/index.user.js
+// @downloadURL     https://github.com/WantenMN/youtube-fullscreen-enhancer/raw/main/index.user.js
 // @version         0.1.1
 // @match           http*://*.youtube.com/*
 // @match           http*://youtube.com/*
@@ -20,10 +20,10 @@
 // ==/UserScript==
 
 (function () {
-  'use strict';
+  "use strict";
 
   // Keyboard shortcut to toggle the script on and off
-  const toggleKey = 'e';
+  const toggleKey = "e";
   // Whether to hide or show the player progress bar when the video is paused
   // true: hide
   // false: show
@@ -48,7 +48,7 @@
   }
   .ytp-progress-bar-container {
     bottom: 10px !important;
-    ${hideProgressBar ? 'display: none !important;' : ''}
+    ${hideProgressBar ? "display: none !important;" : ""}
   }
   .caption-window, .caption-window.ytp-caption-window-bottom, .caption-window ytp-caption-window-top {
     margin-bottom: 0px !important;
@@ -110,6 +110,6 @@
     isEnabled = true;
     addStyleTag();
   };
-  window.addEventListener('keydown', handleKeyDown);
-  window.addEventListener('mousemove', handleMouseMove);
+  window.addEventListener("keydown", handleKeyDown);
+  window.addEventListener("mousemove", handleMouseMove);
 })();
