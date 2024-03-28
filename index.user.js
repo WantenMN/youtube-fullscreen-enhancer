@@ -10,11 +10,11 @@
 // @namespace       https://greasyfork.org/en/scripts/460569
 // @updateURL       https://github.com/WantenMN/youtube-fullscreen-enhancer/raw/main/index.user.js
 // @downloadURL     https://github.com/WantenMN/youtube-fullscreen-enhancer/raw/main/index.user.js
-// @version         0.2
-// @match           http*://*.youtube.com/watch*
-// @match           http*://youtube.com/watch*
-// @match           http*://*.youtu.be/watch*
-// @match           http*://youtu.be/watch*
+// @version         0.2.1
+// @match           http*://*.youtube.com/*
+// @match           http*://youtube.com/*
+// @match           http*://*.youtu.be/*
+// @match           http*://youtu.be/*
 // @run-at          document-end
 // @grant           GM_addStyle
 // ==/UserScript==
